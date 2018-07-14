@@ -19,9 +19,17 @@
     $stmt->bindParam(':user_id', $user_id);
 
     // Insert a row
-    // $id = 2;
+    // $id = 3;
     // $user_id = 5;
     // $stmt->execute();
+
+
+    require_once "src/config.php";
+    $content = new Collection();
+    $title = "PHP Blog";
+    require 'views/header.php';
+    require 'views/footer.php';
+
 
   
  ?>
