@@ -27,8 +27,12 @@
     require_once "src/config.php";
     $content = new Collection();
     $title = "PHP Blog";
-    require 'views/header.php';
-    require 'views/footer.php';
+    // require 'views/header.php';
+
+    // var_dump($repo->all('picture'));
+    var_dump($repo->find('friends',1));
+
+    // require 'views/footer.php';
 
 
   

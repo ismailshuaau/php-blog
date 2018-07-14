@@ -10,3 +10,6 @@ function autoloader($className) {
 }
 
 spl_autoload_register('autoloader');
+
+$repo = new jsonRepository(__DIR__ . '\database.json');
+
