@@ -10,7 +10,7 @@ class jsonRepository implements RepositoryInterface
     }
 
     public function all($entity)
-{
+    {
         $data = json_decode(file_get_contents($this->file));
         $items = [];
 

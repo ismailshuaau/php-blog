@@ -2,7 +2,7 @@
 
 class Collection implements Iterator, Countable
 {
-    protected $repo;
+    protected $repo, $entity;
     public $collection;
      
     public function __construct(RepositoryInterface $repo, $id = null, $field = 'id') {
@@ -10,9 +10,9 @@ class Collection implements Iterator, Countable
         $this->repo = $repo;
 
         if (!empty($id)) {
-             $this->collection = $this->repo->find('tags', $id, $field);
+             $this->collection = $this->repo->find($this->entity, $id, $field);
         } else {
-            $this->collection = $this->repo->all('tags');
+            $this->collection = $this->repo->all($this->entity);
         }
 
     }
